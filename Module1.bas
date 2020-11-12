@@ -131,7 +131,6 @@ forerr:
     Exit Sub
 errhandler:
     MsgBox "Error in BuildList sub"
-
 End Sub
 
 Sub UpdateSchedule()

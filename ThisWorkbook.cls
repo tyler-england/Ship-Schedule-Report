@@ -9,9 +9,10 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = True
 
 
-Private Sub Workbook_BeforeSave(ByVal SaveAsUI As Boolean, Cancel As Boolean)
+Private Sub Workbook_AfterSave(ByVal Success As Boolean)
     If InStr(UCase(Application.UserName), "ENGLAND") > 0 Then ExportModules
 End Sub
+
 
 Private Sub Workbook_Open()
     ThisWorkbook.Activate
