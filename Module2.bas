@@ -300,11 +300,11 @@ Function MakeWorkbook(prodLines() As String, custNames() As String, coNums() As 
     Range("E1").Value = "Y/N"
     
     
-    Range("A:G").Font.Name = "Arial"
-    Range("A:G").Font.Size = 12
+    Range("A:H").Font.Name = "Arial"
+    Range("A:H").Font.Size = 12
     Range("B:C").HorizontalAlignment = xlHAlignCenter
     Range("E:E").HorizontalAlignment = xlHAlignCenter
-    'Range("G:G").HorizontalAlignment = xlHAlignCenter ''removed initials
+    Range("G:H").HorizontalAlignment = xlHAlignCenter ''removed initials
     Range("A1").Value = "REMAINING SHIPMENTS"
     Range("A1").Font.Size = 18
     Range("D:D").NumberFormat = "$#,###"
@@ -332,10 +332,11 @@ Function MakeWorkbook(prodLines() As String, custNames() As String, coNums() As 
         End With
     End With
     Range("F1").Value = "COMMENTS"
-    'Range("G1").Value = "INITIALS" ''removed initials
+    Range("G1").Value = "INITIALS" ''removed initials
+    Range("H1").Value = "DATE"
     Range("E1:F1").Font.Underline = True
     Range("E:F").Font.ColorIndex = 3
-    'Range("G:G").Font.ColorIndex = 23 ''removed initials
+    Range("G:H").Font.ColorIndex = 23 ''removed initials
     Range("F1").HorizontalAlignment = xlHAlignCenter
     With ActiveWindow
         If .FreezePanes Then .FreezePanes = False
@@ -343,7 +344,7 @@ Function MakeWorkbook(prodLines() As String, custNames() As String, coNums() As 
         .SplitRow = 1
         .FreezePanes = True
     End With
-    Range("A:G").Locked = False
+    Range("A:H").Locked = False
     
     x = rowNum
     i = 0
